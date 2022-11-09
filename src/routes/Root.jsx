@@ -19,7 +19,7 @@ const [data, setData] = useState({})
           (
             URL.pathname === '/login'  
             ||
-            URL.pathname === '/user' 
+            URL.pathname === '/chat' 
           )       
           && (
             <Buttom 
