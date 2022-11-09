@@ -1,0 +1,46 @@
+.logo {
+  position: relative;  
+  transform: translateY(5rem);
+  animation: turnOn 2s linear;  
+
+  &__img {
+    width: 30rem;
+    height: 30rem;
+    margin: auto;   
+    position: relative;     
+    background-color: $color-white;
+    clip-path: circle(50% at 50% 50%);
+    text-align: center;
+
+    h1 {
+      color: $color-white;
+      font-size: 10rem;
+    }
+    &::before {
+      content: '\aZAP!';
+      white-space: pre;
+      font-size: 5.5rem;
+      font-weight: bolder;
+      color: $color-white;
+      width: 28rem;
+      height: 28rem;
+      background: $color-primary-dark;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      clip-path: circle(50% at 50% 50%);
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    width: 10rem;
+    height: 15rem;
+    display: inline-block;
+    background-color: $color-white;
+    bottom: -14rem;
+    left: 16rem;
+    clip-path: polygon(92% 0, 30% 0, 1% 49%);
+    
+  }
+}

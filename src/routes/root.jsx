@@ -1,12 +1,16 @@
 import { Outlet } from 'react-router-dom';
 
-export default function Root() {
+import Buttom from '../components/buttom';
+
+export default function Root() {  
+
   return (
     <main className="home">      
       <div className="mobile">
         <div className="mobile__content">
           <Outlet />
         </div>
+        <Buttom />
       </div>
     </main>
   )

@@ -1,0 +1,10 @@
+.login {
+  background-color: $color-primary-light;
+  border: 2px $color-white;
+  height: 71.5vh;  
+  width: 99%; 
+  text-align: center;  
+  margin: auto;
+  transform: translateY(.3rem);
+  animation: turnOn 3s linear;
+}
