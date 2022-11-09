@@ -6,5 +6,12 @@
     );
     text-align: center;
     color: $color-primary-light;
-    font-size: bold;
+    font-size: 5rem;
+    border: solid 5px $color-primary-light;
+    width: 60%;
+    margin: auto;
+    
+    i {
+      color: red;
+    }
 }

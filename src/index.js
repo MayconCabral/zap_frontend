@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
-  RouterProvider,
-  Route,
+  RouterProvider, 
 } from 'react-router-dom';
 import './index.css';
 import './sass/main.scss';
 
-import Root from './routes/root';
-import Login from './routes/login';
+import Root from './routes/Root';
+import Login from './routes/Login';
+import User from './routes/User';
 import ErrorPage from './error-page';
 
 
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
       { 
         path: 'login',
         element: <Login />
+      },
+      {
+        path: 'user',
+        element: <User />
       }
     ]
   }
@@ -30,8 +34,8 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
+  <React.StrictMode>    
+      <RouterProvider router={router} />   
   </React.StrictMode>
 );
 

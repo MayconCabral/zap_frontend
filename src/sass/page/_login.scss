@@ -15,6 +15,19 @@
     align-items: center;
     row-gap: 2rem;
     animation: turnOn 3s linear;
-    margin-top: 15rem;    
-  }
+    margin-top: 17rem;    
+  }  
+}
+
+.login_btn {
+  background-color: $color-primary-dark;  
+  box-shadow: 0px 0px 2.7px rgba($color-primary-light, 0.251),
+  0px 0px 6.9px rgba($color-primary-light, 0.359),
+  0px 0px 14.2px rgba($color-primary-light, 0.451),
+  0px 0px 29.2px rgba($color-primary-light, 0.559),
+  0px 0px 80px rgba($color-primary-light, 0.81);
+
+  p {
+    color: $color-white;
+  }  
 }
