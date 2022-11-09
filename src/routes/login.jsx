@@ -7,8 +7,8 @@ export default function Login() {
         <div className="logo__bottom"></div>
       </div>
       <div className="login__inputs">
-        <input type="text" />
-        <input type="password" />
+        <input className="inputs" type="text" placeholder="nome"/>
+        <input className="inputs" type="password" placeholder="senha"/>
       </div>
     </div>
   )

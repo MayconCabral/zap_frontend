@@ -7,4 +7,14 @@
   margin: auto;
   transform: translateY(.3rem);
   animation: turnOn 3s linear;
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 2rem;
+    animation: turnOn 3s linear;
+    margin-top: 15rem;    
+  }
 }
