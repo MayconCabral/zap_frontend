@@ -1,0 +1,22 @@
+.mobile {
+  max-width: 50rem;
+  height: 75rem;
+  position: relative;
+  top: 2%;
+  border: solid 10px $color-black;
+  border-radius: 1rem;
+  margin: auto auto;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -10rem;
+    right: -1rem;
+    border-radius: 0 0 5rem 5rem;
+    width: 104.1%;
+    height: 20%;
+    position: absolute;
+    background-color: $color-black;
+  }
+}

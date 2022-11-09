@@ -1,0 +1,10 @@
+#error-page {
+  background-image: linear-gradient(
+    to top bottom,
+    rgba($color-grey-dark, 0.5),
+    rgba($color-black, 0.5),
+    );
+    text-align: center;
+    color: $color-primary-light;
+    font-size: bold;
+}
