@@ -10,6 +10,7 @@ import './sass/main.scss';
 import Root from './routes/Root';
 import Login from './routes/Login';
 import User from './routes/User';
+import Chat from './routes/Chat';
 import ErrorPage from './error-page';
 
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: 'user',
         element: <User />
+      },
+      {
+        path: 'chat/:id',
+        element: <Chat />
       }
     ]
   }

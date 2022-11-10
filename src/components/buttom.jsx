@@ -1,17 +1,35 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Buttom(props) {   
-  
+  const URL = useLocation();
+  const [userData, setUserData] = useState({});
+
   const login = () => {
     const { name, password } = props.data;
 
-    axios.post('http://localhost:3001/login',{
-      name,
-      password
-    }).then(({data}) => {
-      props.setdata(data)
-    })
+    if (URL.pathname === '/login') {
+      axios.post('https://zap-backend.onrender.com/login',{
+        name,
+        password
+      }).then(({data}) => {
+        props.setdata(data)
+        setUserData(data)
+      });
+    }    
+  };
+
+  if (URL.pathname === '/user' && userData.token) {    
+    axios.get('http://localhost:3001/contact', { userId: userData.id}, {
+      headers: {
+        'Authorization': `${userData.token}`
+      }
+    }).then((data) => {        
+      console.log(data)
+    }).catch(({response}) => {
+      console.log(response)
+    })    
   }
   
   return (

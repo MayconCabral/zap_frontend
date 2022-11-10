@@ -36,6 +36,7 @@
   
     &::after {
     content: "";
+    z-index: 0;
     display: inline-block;
     position: absolute;
     bottom: -10rem;

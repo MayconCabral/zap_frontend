@@ -29,5 +29,18 @@
 
   p {
     color: $color-white;
-  }  
+  } 
+}
+
+.logout_btn {
+  background-color: red;  
+  box-shadow: 0px 0px 2.7px rgba(red, 0.251),
+  0px 0px 6.9px rgba(red, 0.359),
+  0px 0px 14.2px rgba(red, 0.451),
+  0px 0px 29.2px rgba(red, 0.559),
+  0px 0px 80px rgba(red, 0.81);
+
+  p {
+    color: $color-white;
+  } 
 }
