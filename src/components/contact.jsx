@@ -1,5 +1,5 @@
 export default function contact(props) {
-  console.log(props)
+
   return (
     <div className="contact">
       <img src="" alt="profile" />

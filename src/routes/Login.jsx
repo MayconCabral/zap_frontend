@@ -7,12 +7,12 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [, setData] = useOutletContext();
 
+
   useEffect(() => {
     loginSchema.isValid({
       name,
       password
     }).then((validation) => {
-      console.log(validation)
       if (validation) {
         setData({
           name,
@@ -21,7 +21,6 @@ export default function Login() {
       }
     })
   }, [name, password, setData]);
- 
 
   return (
     <div className="login">

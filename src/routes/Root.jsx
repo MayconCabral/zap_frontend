@@ -7,6 +7,9 @@ export default function Root() {
 const URL = useLocation()
 const [data, setData] = useState({})
 
+const user = (data) => {
+  setData(data)
+};
 
   return (
     <main className="home">      
@@ -23,10 +26,11 @@ const [data, setData] = useState({})
           )       
           && (
             <Buttom 
-            route='/login' 
+            route='/user' 
             text='Login!' 
             class='login_btn'
             data={data}
+            setdata={user}         
             />
           )
         }
