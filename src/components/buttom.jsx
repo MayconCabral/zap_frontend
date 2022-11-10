@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export default function Buttom(props) {   
   const URL = useLocation();
-  const [userData, setUserData] = useState({});
+  const [, setUserData] = useState({});
 
   const login = () => {
     const { name, password } = props.data;
