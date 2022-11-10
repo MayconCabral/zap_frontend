@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 
 import Buttom from '../components/buttom';
+import Modal from '../components/modal';
 import { check } from '../utils/checkString';
 
 export default function Root() {
@@ -11,6 +12,14 @@ const [data, setData] = useState({})
 const user = (data) => {
   setData(data)
 };
+
+// ativar a classe no modal
+let modal = false;
+if (data.error) {
+  modal = true
+}
+//
+
 
 const renderButton = () => {
   if (URL.pathname === '/login') {
@@ -37,14 +46,17 @@ const renderButton = () => {
 };
 
   return (
-    <main className="home">      
-      <div className="mobile">
-        <div className="mobile__content">
-          <Outlet context={[data, setData]}/>
+    <>
+      <main className="home">      
+        <div className="mobile">
+          <div className="mobile__content">
+            <Outlet context={[data, setData]}/>
+          </div>
+          <Buttom route='/login' text='Press me!'/>
+          { renderButton() }        
         </div>
-        <Buttom route='/login' text='Press me!'/>
-        { renderButton() }
-      </div>
-    </main>
+      </main>
+      <Modal text={data.error} show={modal}/>    
+    </>
   )
 }

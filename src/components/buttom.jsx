@@ -16,6 +16,8 @@ export default function Buttom(props) {
       }).then(({data}) => {
         props.setdata(data)
         setUserData(data)
+      }).catch(({response}) => {
+        setUserData(response.data)
       });
     }    
   };

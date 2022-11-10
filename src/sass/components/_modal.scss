@@ -1,0 +1,84 @@
+.modal {
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-grey-dark, .3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .absolute {
+    position: absolute;
+    top: 0;
+    right: 4rem;          
+  }
+
+  &__content {
+    width: 50%;
+    height: 50%;
+    background-color: $color-white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &__btn {
+      margin-top: .5rem;
+      display: flex;
+      align-items: center;
+      color: $color-black;
+      background: none;
+      border: none;
+      padding: 1.2rem 1.8rem;
+      position: relative;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: monospace;
+      transition: linear .3s; 
+      z-index: 100;     
+
+      &:hover {
+        color: $color-white;        
+
+        &::before {
+          width: 100%;
+          transform: translateY(-50%) translateX(-1.8rem);
+          transition: transform .25s cubic-bezier(0,0,.5,2);
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(calc(100% + 4px));
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: $color-primary-dark;
+        border-radius: 5rem;
+        transition: transform .25s .25s cubic-bezier(0, 0, .5, 2), 
+        width .25s cubic-bezier(0, 0, .5, 2);
+        z-index: -1;
+      }
+    }
+
+    &__textBox {
+      font-size: 3rem;
+      width: 60%;
+      text-align: center;
+    }
+
+  }
+}
+.close {
+  visibility: hidden;
+}
+
+.open {
+  visibility: visible;
+}

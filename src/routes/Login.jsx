@@ -23,30 +23,34 @@ export default function Login() {
   }, [name, password, setData]);
 
   return (
-    <div className="login">
-      <div className="logo">
-        <div className="logo__img">                 
+    <>
+    
+      <div className="login">
+        <div className="logo">
+          <div className="logo__img">                 
+          </div>
+          <div className="logo__bottom"></div>
         </div>
-        <div className="logo__bottom"></div>
-      </div>
-      <div className="login__inputs">
-        <input 
-        className="inputs" 
-        type="text" 
-        placeholder="nome"
-        onChange={
-          ({ target }) => setName(target.value)
-        }
-        />
-        <input 
-        className="inputs" 
-        type="password" 
-        placeholder="senha"
-        onChange={
-          ({ target }) => setPassword(target.value)
-        }
-        />
+        <div className="login__inputs">
+          <input 
+          className="inputs" 
+          type="text" 
+          placeholder="nome"
+          onChange={
+            ({ target }) => setName(target.value)
+          }
+          />
+          <input 
+          className="inputs" 
+          type="password" 
+          placeholder="senha"
+          onChange={
+            ({ target }) => setPassword(target.value)
+          }
+          />
+        </div>      
       </div>      
-    </div>
+    </>
+
   )
 }
