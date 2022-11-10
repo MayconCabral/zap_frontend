@@ -11,22 +11,6 @@ import Contact from '../components/contact';
 export default function User() {
   const [data, ] = useOutletContext();
 
-  // const [contacts, setContacts] = useState([]);  
-  
-  //-----------------Mesmo com o dado de requisição inserido manualmente, axios tem acesso negado... aparenta envio de objeto vazio----------
-  // if(data.token) {      
-  //     axios.get('http://localhost:3001/contact', { userId: data.id }, {
-  //       headers: {
-  //         'Authorization': `${data.token}`
-  //       }
-  //     }).then((data) => {        
-  //       setContacts(data)
-  //     }).catch(({response}) => {
-  //       console.log(response)
-  //     })    
-  // }
-
-
   const contacts = [
     {
       id: 1,
@@ -57,7 +41,13 @@ export default function User() {
       <div className="user__contacts">
         {
           contacts.map((contact) => (            
-            <Contact id={contact.id} propKey={contact.phone} img={contact.img} name={contact.name} phone={contact.phone}/>           
+            <Contact 
+            id={contact.id} 
+            propKey={contact.phone} 
+            img={contact.img} 
+            name={contact.name} 
+            phone={contact.phone}
+            />           
           ))
         }
       </div>

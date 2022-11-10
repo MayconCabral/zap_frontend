@@ -20,17 +20,19 @@ export default function Buttom(props) {
     }    
   };
 
-  if (URL.pathname === '/user' && userData.token) {    
-    axios.get('http://localhost:3001/contact', { userId: userData.id}, {
-      headers: {
-        'Authorization': `${userData.token}`
-      }
-    }).then((data) => {        
-      console.log(data)
-    }).catch(({response}) => {
-      console.log(response)
-    })    
-  }
+  // ACESSO NEGADO!!! BUG MORA AQUI.... T_T
+  // if (URL.pathname === '/user' && userData.token) {  
+      
+  //   axios.get('https://zap-backend.onrender.com/contact', { userId: userData.id}, {
+  //     headers: {
+  //       'Authorization': `${userData.token}`
+  //     }
+  //   }).then((data) => {        
+  //     console.log(data)
+  //   }).catch(({response}) => {
+  //     console.log(response)
+  //   })    
+  // }
   
   return (
     <Link className={`mobile__buttom ${props.class}`} to={props.route} onClick={login}>
